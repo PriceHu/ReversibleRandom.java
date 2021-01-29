@@ -53,6 +53,14 @@ public class ReversibleRandom {
     }
 
     /**
+     * Reset the initial value of this RNG. This is equal to something like {@code rand = new ReversibleRandom()},
+     * except that you don't need to create another instance.
+     */
+    public void reset() {
+        current = ThreadLocalRandom.current().nextLong(m);
+    }
+
+    /**
      * Set initial number between 0 (inclusive) and {@param m} (exclusive).
      */
     public void setInitial(long i) {
