@@ -151,25 +151,25 @@ public class ReversibleRandom {
     /**
      * Get current pseudorandom Long between 0 (inclusive) and {@param m} (exclusive).
      *
-     * @return previous pseudorandom Long between 0 (inclusive) and {@param m} (exclusive).
+     * @return current pseudorandom Long between 0 (inclusive) and {@param m} (exclusive).
      */
     public long current() {
         return current(0, m);
     }
 
     /**
-     * Get previous pseudorandom Long between 0 (inclusive) and {@param bound} (exclusive).
+     * Get current pseudorandom Long between 0 (inclusive) and {@param bound} (exclusive).
      *
-     * @return previous pseudorandom Long between 0 (inclusive) and {@param bound} (exclusive).
+     * @return current pseudorandom Long between 0 (inclusive) and {@param bound} (exclusive).
      */
     public long current(long bound) {
         return current(0, bound);
     }
 
     /**
-     * Get previous pseudorandom Long between {@param min} (inclusive) and {@param max} (exclusive).
+     * Get current pseudorandom Long between {@param min} (inclusive) and {@param max} (exclusive).
      *
-     * @return previous pseudorandom Long between {@param min} (inclusive) and {@param max} (exclusive).
+     * @return current pseudorandom Long between {@param min} (inclusive) and {@param max} (exclusive).
      */
     public long current(long min, long max) {
         return current % (max - min) + min;
